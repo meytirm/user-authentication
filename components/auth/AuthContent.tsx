@@ -93,5 +93,5 @@ const styles = StyleSheet.create({
 
 interface Props {
   isLogin: boolean;
-  onAuthenticate: Function;
+  onAuthenticate: ({email, password}: {email: string, password: string}) => void;
 }
