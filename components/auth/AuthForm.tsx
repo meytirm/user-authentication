@@ -50,7 +50,7 @@ function AuthForm({ isLogin, onSubmit, credentialsInvalid }: Props) {
       <View>
         <Input
           label="Email Address"
-          onUpdateValue={() => updateInputValueHandler('email', enteredEmail)}
+          onUpdateValue={(value) => updateInputValueHandler('email', value)}
           value={enteredEmail}
           keyboardType="email-address"
           isInvalid={emailIsInvalid}
@@ -58,7 +58,7 @@ function AuthForm({ isLogin, onSubmit, credentialsInvalid }: Props) {
         {!isLogin && (
           <Input
             label="Confirm Email Address"
-            onUpdateValue={() => updateInputValueHandler('confirmEmail', enteredConfirmEmail)}
+            onUpdateValue={(value) => updateInputValueHandler('confirmEmail', value)}
             value={enteredConfirmEmail}
             keyboardType="email-address"
             isInvalid={emailsDontMatch}
@@ -66,7 +66,7 @@ function AuthForm({ isLogin, onSubmit, credentialsInvalid }: Props) {
         )}
         <Input
           label="Password"
-          onUpdateValue={() => updateInputValueHandler('password', enteredPassword)}
+          onUpdateValue={(value) => updateInputValueHandler('password', value)}
           secure
           value={enteredPassword}
           isInvalid={passwordIsInvalid}
@@ -74,7 +74,7 @@ function AuthForm({ isLogin, onSubmit, credentialsInvalid }: Props) {
         {!isLogin && (
           <Input
             label="Confirm Password"
-            onUpdateValue={() => updateInputValueHandler('confirmPassword', enteredConfirmPassword)}
+            onUpdateValue={(value) => updateInputValueHandler('confirmPassword', value)}
             secure
             value={enteredConfirmPassword}
             isInvalid={passwordsDontMatch}
