@@ -7,10 +7,10 @@ import {AuthCredentials} from "../../types/auth";
 // import {AuthCredentials} from "../../types/auth";
 
 function AuthForm({ isLogin, onSubmit, credentialsInvalid }: Props) {
-  const [enteredEmail, setEnteredEmail] = useState('');
-  const [enteredConfirmEmail, setEnteredConfirmEmail] = useState('');
-  const [enteredPassword, setEnteredPassword] = useState('');
-  const [enteredConfirmPassword, setEnteredConfirmPassword] = useState('');
+  const [enteredEmail, setEnteredEmail] = useState('test@test.com');
+  const [enteredConfirmEmail, setEnteredConfirmEmail] = useState('test@test.com');
+  const [enteredPassword, setEnteredPassword] = useState('test@test.com');
+  const [enteredConfirmPassword, setEnteredConfirmPassword] = useState('test@test.com');
 
   const {
     email: emailIsInvalid,
