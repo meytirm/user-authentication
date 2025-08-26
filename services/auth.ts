@@ -1,13 +1,13 @@
-import {fetch} from "expo/fetch";
+import {createUserWithEmailAndPassword, signInWithEmailAndPassword} from 'firebase/auth'
+import {firebaseAuth} from "./firebase";
+
+
 
 export function createUser(email: string, password: string) {
-  return fetch('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyBFPIuRS85KKPjfu5njPKc-clVswCCgEY8', {
-    method: 'POST',
-    body: JSON.stringify({
-      email,
-      password,
-      returnSecureToken: true,
-    }),
-  })
+  return createUserWithEmailAndPassword(firebaseAuth, email, password)
+}
+
+export function loginUser(email: string, password: string) {
+  return signInWithEmailAndPassword(firebaseAuth, email, password)
 }
 
