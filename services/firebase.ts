@@ -1,9 +1,11 @@
 import { initializeApp } from "firebase/app";
 import {getAuth} from "firebase/auth";
 
+const apiKey = process.env.EXPO_PUBLIC_API_KEY;
+
 const firebaseConfig = {
 
-  apiKey: "REMOVED_API_KEY",
+  apiKey: apiKey,
 
   authDomain: "expense-app-bc386.firebaseapp.com",
 
